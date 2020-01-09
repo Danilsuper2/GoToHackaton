@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+        <textarea class="form-control is-invalid" id="places" name="place" placeholder="Введите места, через запятую" required=""></textarea>
+    </div>
+    <div class="mb-3">
+        <textarea class="form-control is-invalid" id="times" name="time" placeholder="Введите времена, через запятую" required=""></textarea>
+    </div>
+    <button type="submit">accept</button>
+</form>
+{% endblock %}
