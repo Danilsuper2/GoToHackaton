@@ -52,7 +52,7 @@ def time_and_place(request):
             telebot.apihelper.proxy = {'https': 'socks5h://geek:socks@t.geekclass.ru:7777'}
             bot = telebot.TeleBot(token="1008644876:AAHdPfzbXGiq5WpX9IJyKVxoGnK4wYXRZ0w")
             for i in ans:
-                bot.send_message(542658693, '{}, вместе с {}, в {}, в {}'.format(*i))
+                bot.send_message(-1001213915805, '{}, вместе с {}, в {}, в {}'.format(*i))
             return redirect('/test')
 
 
@@ -110,5 +110,5 @@ def tea(request):
         telebot.apihelper.proxy = {'https': 'socks5h://geek:socks@t.geekclass.ru:7777'}
         bot = telebot.TeleBot(token="1008644876:AAHdPfzbXGiq5WpX9IJyKVxoGnK4wYXRZ0w")
         for i in ans:
-            bot.send_message(542658693, '{}, вместе с {}, в {}, в {}'.format(*i))
+            bot.send_message(-1001213915805, '{}, вместе с {}, в {}, в {}'.format(*i))
         return redirect('/')
