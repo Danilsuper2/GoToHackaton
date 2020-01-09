@@ -1,21 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
 <form enctype="multipart/form-data" method="post">
     {% csrf_token %}
-    <input type="file" id="file" name="file">
-    <button type="submit">Отправить</button>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <button class='btn btn-primary' type="submit">Отправить</button>
+        </div>
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="file" name="file" aria-describedby="inputGroupFileAddon01">
+            <label class="custom-file-label" for="file">Выбрать файл</label>
+        </div>
+    </div>
     {% if messages %}
-    <ul class="messages">
         {% for message in messages %}
-        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        <div class="alert alert-warning" role="alert">{{ message }}</div>
         {% endfor %}
-    </ul>
     {% endif %}
 </form>
-</body>
-</html>
+{% endblock %}

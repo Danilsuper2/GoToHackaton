@@ -77,8 +77,8 @@ def index(request):
             handle_uploaded_file(request.FILES['file'])
             return redirect('/time_and_place')
         else:
-            messages.info(request, 'Вставьте файл.')
-            return HttpResponseRedirect('/test')
+            messages.info(request, 'Выберите файл.')
+            return HttpResponseRedirect('/')
 
 
 def tea(request):
